@@ -1,0 +1,2 @@
+# Introduction
+Fuze is a lightweight javascript template engine designed to turn javascript objects into rendered html in a standard, intuitive, and simple way. Fuze does not use a proprietary template language, so there is nothing new to learn; if you are familiar with jQuery and the DOM, Fuze is a breeze
