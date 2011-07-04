@@ -3,45 +3,43 @@ Fuze is a lightweight javascript template engine designed to turn javascript obj
 
 # Example
 Using Fuze is straightforward. Given the following HTML:
-<code>
-	<div id="contactInfo">
-		Name: <span class="firstName"></span> <span class="lastName"></span><br />
-		Phone: <span class="phone"></phone>
-		
-		<div class="address">
-			Address: <span class="street"></street><br />
-			<span class="city"></city>, <span class="state"></span> <span class="zipcode"></span>
-		</div>
-	</div>
-</code>
+
+    <div id="contactInfo">
+	    Name: <span class="firstName"></span> <span class="lastName"></span><br />
+	    Phone: <span class="phone"></phone>
+	
+	    <div class="address">
+		    Address: <span class="street"></street><br />
+		    <span class="city"></city>, <span class="state"></span> <span class="zipcode"></span>
+	    </div>
+    </div>
 
 And the following javascript object:
-<pre><code>var contact = {
-		firstName: 	'Bill',
-		lastName: 	'Jones',
-		phone:	'555-1234',
-		address: {
-			street: '123 Fake Street',
-			city:	'Salida',
-			state: 	'CO',
-			zipcode: '81201'
-		}
-	};
-</code></pre>
+
+    var contact = {
+	    firstName: 	'Bill',
+	    lastName: 	'Jones',
+	    phone:	'555-1234',
+	    address: {
+		    street: '123 Fake Street',
+		    city:	'Salida',
+		    state: 	'CO',
+		    zipcode: '81201'
+	    }
+    };
 
 We can inject the object into the html by running fuze() on the matched element.
-<pre><code>$('#contactInfo').fuze(contact);
-</code></pre>
+    
+	$('#contactInfo').fuze(contact);
 
 Which produces this:
-<code>
-	<div id="contactInfo">
-		Name: <span class="firstName">Bill</span> <span class="lastName">Jones</span><br />
-		Phone: <span class="phone">555-1234</phone>
-		
-		<div class="address">
-			Address: <span class="street">123 Fake Street</street><br />
-			<span class="city">Salida</city>, <span class="state">CO</span> <span class="zipcode">81201</span>
-		</div>
-	</div>
-</code>
+
+    <div id="contactInfo">
+	    Name: <span class="firstName">Bill</span> <span class="lastName">Jones</span><br />
+	    Phone: <span class="phone">555-1234</phone>
+	
+	    <div class="address">
+		    Address: <span class="street">123 Fake Street</street><br />
+		    <span class="city">Salida</city>, <span class="state">CO</span> <span class="zipcode">81201</span>
+	    </div>
+    </div>
