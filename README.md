@@ -3,6 +3,7 @@ Fuze is a lightweight javascript template engine designed to turn javascript obj
 
 # Example
 Using Fuze is straightforward. Given the following HTML:
+<pre><code>
 	<div id="contactInfo">
 		Name: <span class="firstName"></span> <span class="lastName"></span><br />
 		Phone: <span class="phone"></phone>
@@ -12,7 +13,10 @@ Using Fuze is straightforward. Given the following HTML:
 			<span class="city"></city>, <span class="state"></span> <span class="zipcode"></span>
 		</div>
 	</div>
+</code></pre>
+
 And the following javascript object:
+<pre><code>
 	var contact = {
 		firstName: 	'Bill',
 		lastName: 	'Jones',
@@ -24,10 +28,15 @@ And the following javascript object:
 			zipcode: '81201'
 		}
 	};
+</code></pre>
+
 We can inject the object into the html by running fuze() on the matched element.
+<pre><code>
 	$('#contactInfo').fuze(contact);
-	
+</code></pre>
+
 Which produces this:
+<pre><code>
 	<div id="contactInfo">
 		Name: <span class="firstName">Bill</span> <span class="lastName">Jones</span><br />
 		Phone: <span class="phone">555-1234</phone>
@@ -37,3 +46,4 @@ Which produces this:
 			<span class="city">Salida</city>, <span class="state">CO</span> <span class="zipcode">81201</span>
 		</div>
 	</div>
+</code></pre>
